@@ -1,0 +1,42 @@
+{
+    "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "-l", "warning", "make", "--plugins-from-file", "$file"],
+	
+	 "shell": true,
+	 "working_dir":"$project_path/craft-engine",
+
+     "variants": [
+        {
+            "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "-l", "warning", "make", "execute"],
+            "name": "Run",
+            "shell": true
+
+        },
+
+        {
+            "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "wrap"],
+            "name": "Wrap",
+            "shell": true
+        },
+
+        {
+            "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "-l", "debug", "make"],
+            "name": "Debug Build",
+            "shell": true
+
+        },
+
+        {
+            "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "execute"],
+            "name": "Execute",
+            "shell": true
+        },
+
+        {
+            "cmd": ["vcvarsall", "&", "python", "main.py", "game_examples/working", "clean"],
+            "name": "Clean",
+            "shell": true
+        }
+
+    ]
+
+}
